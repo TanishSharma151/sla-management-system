@@ -1,12 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const createTicket = require("../controllers/tickets.controller")
 
-router.post("/register", (req, res) =>{
-    res.json({message: "Register route working"});
-});
-
-router.post("/login", (req, res) =>{
-    res.json({message: "Login route working"})
-})
+router.post("/create-ticket", createTicket )
 
 module.exports = router;
